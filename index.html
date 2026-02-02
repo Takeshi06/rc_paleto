@@ -9,6 +9,9 @@
     <link rel="preload" href="assets/background.jpg" as="image">
     <link rel="preload" href="assets/logo.png" as="image">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -29,58 +32,77 @@
         </div>
     </section>
 
-    <!-- Section Entreprises -->
+    <!-- Section Entreprises - Grille 2x2 -->
     <section id="entreprises" class="entreprises">
-        <div class="cards-container">
-            <!-- Card 1: Paleto Repair -->
-            <div class="card">
-                <div class="card-glow"></div>
-                <div class="card-icon garage">
-                    <i class="fas fa-wrench"></i>
-                </div>
-                <h3 class="card-title">Paleto Repair</h3>
-                <p class="card-subtitle">Garage Mécanique</p>
-                <p class="card-description">
-                    Le garage mécanique de référence du Nord. Nous recherchons des mécaniciens passionnés pour réparer et personnaliser les véhicules de notre communauté. Rejoignez une équipe professionnelle avec des équipements de pointe, une clientèle fidèle et de réelles possibilités d'évolution.
-                </p>
-                <button class="discord-btn" data-discord="paleto-repair-discord">
-                    <i class="fab fa-discord"></i>
-                    <span>Discord</span>
-                </button>
-            </div>
+        <div class="entreprises-inner">
+            <div class="cards-grid">
+                <!-- Paleto Repair -->
+                <article class="card card-garage">
+                    <div class="card-icon-wrap">
+                        <img class="card-logo" src="assets/logo-paleto-repair.png" alt="" onerror="this.style.display='none'">
+                        <i class="fas fa-wrench card-icon" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="card-title">Paleto Repair</h3>
+                    <p class="card-type">Garage Mécanique</p>
+                    <p class="card-desc">
+                        Le garage mécanique de référence du Nord. Nous recherchons des mécaniciens passionnés pour réparer et personnaliser les véhicules de notre communauté. Rejoignez une équipe professionnelle avec des équipements de pointe, une clientèle fidèle et de réelles possibilités d'évolution.
+                    </p>
+                    <button type="button" class="discord-btn" data-discord="paleto-repair-discord">
+                        <i class="fab fa-discord"></i>
+                        <span>Copier le Discord</span>
+                    </button>
+                </article>
 
-            <!-- Card 2: Stags -->
-            <div class="card">
-                <div class="card-glow"></div>
-                <div class="card-icon restaurant">
-                    <i class="fas fa-utensils"></i>
-                </div>
-                <h3 class="card-title">Stags</h3>
-                <p class="card-subtitle">Restaurant</p>
-                <p class="card-description">
-                    Le restaurant emblématique du Nord. Nous recherchons des serveurs et cuisiniers motivés pour offrir une expérience culinaire exceptionnelle. Ambiance conviviale, horaires flexibles, formation complète et pourboires généreux vous attendent.
-                </p>
-                <button class="discord-btn" data-discord="stags-discord">
-                    <i class="fab fa-discord"></i>
-                    <span>Discord</span>
-                </button>
-            </div>
+                <!-- Stags -->
+                <article class="card card-restaurant">
+                    <div class="card-icon-wrap">
+                        <img class="card-logo" src="assets/logo-stags.png" alt="" onerror="this.style.display='none'">
+                        <i class="fas fa-utensils card-icon" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="card-title">Stags</h3>
+                    <p class="card-type">Restaurant</p>
+                    <p class="card-desc">
+                        Le restaurant emblématique du Nord. Nous recherchons des serveurs et cuisiniers motivés pour offrir une expérience culinaire exceptionnelle. Ambiance conviviale, horaires flexibles, formation complète et pourboires généreux vous attendent.
+                    </p>
+                    <button type="button" class="discord-btn" data-discord="stags-discord">
+                        <i class="fab fa-discord"></i>
+                        <span>Copier le Discord</span>
+                    </button>
+                </article>
 
-            <!-- Card 3: LTD Paleto -->
-            <div class="card">
-                <div class="card-glow"></div>
-                <div class="card-icon magasin">
-                    <i class="fas fa-store"></i>
-                </div>
-                <h3 class="card-title">LTD Paleto</h3>
-                <p class="card-subtitle">Magasin de Proximité</p>
-                <p class="card-description">
-                    Le magasin incontournable du Nord. Nous cherchons des vendeurs motivés et souriants pour servir notre communauté avec professionnalisme. Poste stable, ambiance familiale, formation assurée et gestion autonome des stocks.
-                </p>
-                <button class="discord-btn" data-discord="ltd-paleto-discord">
-                    <i class="fab fa-discord"></i>
-                    <span>Discord</span>
-                </button>
+                <!-- LTD Paleto -->
+                <article class="card card-store">
+                    <div class="card-icon-wrap">
+                        <img class="card-logo" src="assets/logo-ltd-paleto.png" alt="" onerror="this.style.display='none'">
+                        <i class="fas fa-store card-icon" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="card-title">LTD Paleto</h3>
+                    <p class="card-type">Magasin de Proximité</p>
+                    <p class="card-desc">
+                        Le magasin incontournable du Nord. Nous cherchons des vendeurs motivés et souriants pour servir notre communauté avec professionnalisme. Poste stable, ambiance familiale, formation assurée et gestion autonome des stocks.
+                    </p>
+                    <button type="button" class="discord-btn" data-discord="ltd-paleto-discord">
+                        <i class="fab fa-discord"></i>
+                        <span>Copier le Discord</span>
+                    </button>
+                </article>
+
+                <!-- La Coopérative -->
+                <article class="card card-production">
+                    <div class="card-icon-wrap">
+                        <img class="card-logo" src="assets/logo-cooperative.png" alt="" onerror="this.style.display='none'">
+                        <i class="fas fa-industry card-icon" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="card-title">La Coopérative</h3>
+                    <p class="card-type">Entreprise de production</p>
+                    <p class="card-desc">
+                        La Coopérative rassemble les acteurs de la production du Nord. Nous recherchons des personnes motivées pour rejoindre notre structure : transformation, logistique, vente de produits. Rejoignez une équipe solidaire avec des projets concrets et une vraie dynamique de coopération.
+                    </p>
+                    <button type="button" class="discord-btn" data-discord="cooperative-discord">
+                        <i class="fab fa-discord"></i>
+                        <span>Copier le Discord</span>
+                    </button>
+                </article>
             </div>
         </div>
     </section>

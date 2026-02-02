@@ -6,7 +6,8 @@
 const discordLinks = {
     'paleto-repair-discord': 'https://discord.gg/paleto-repair',
     'stags-discord': 'https://discord.gg/stags-restaurant',
-    'ltd-paleto-discord': 'https://discord.gg/ltd-paleto'
+    'ltd-paleto-discord': 'https://discord.gg/ltd-paleto',
+    'cooperative-discord': 'https://discord.gg/cooperative'
 };
 
 // ===========================================
@@ -25,10 +26,7 @@ function setupDiscordButtons() {
                     showToast();
                     
                     // Effet visuel sur le bouton
-                    button.style.transform = 'scale(0.95)';
-                    setTimeout(() => {
-                        button.style.transform = '';
-                    }, 150);
+                    // Note: CSS handles hover, JS handles click feedback
                 }).catch(err => {
                     console.error('Erreur:', err);
                 });
@@ -68,11 +66,41 @@ function setupSmoothScroll() {
 }
 
 // ===========================================
+// PARALLAX EFFECT
+// ===========================================
+function setupParallax() {
+    const heroBg = document.querySelector('.hero-background');
+    const heroContent = document.querySelector('.hero-content');
+    const heroLogo = document.querySelector('.hero-logo');
+    
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        
+        if (scrolled < window.innerHeight) {
+            // Background moves slower than scroll
+            if (heroBg) {
+                heroBg.style.transform = `scale(1.05) translateY(${scrolled * 0.5}px)`;
+            }
+            // Content moves slightly faster/fades
+            if (heroContent) {
+                heroContent.style.transform = `translateY(${scrolled * 0.2}px)`;
+                heroContent.style.opacity = 1 - (scrolled / 700);
+            }
+            // Logo parallax
+            if (heroLogo) {
+                heroLogo.style.transform = `translate(-50%, ${scrolled * 0.3}px)`;
+            }
+        }
+    });
+}
+
+// ===========================================
 // INITIALISATION
 // ===========================================
 document.addEventListener('DOMContentLoaded', () => {
     setupDiscordButtons();
     setupSmoothScroll();
+    setupParallax();
     
-    console.log('%c🏔️ État Indépendant du Nord', 'color: #d4af37; font-size: 20px; font-weight: bold;');
+    console.log('%c🏔️ État Indépendant du Nord', 'color: #ccb286; font-size: 20px; font-weight: bold; background: #1b3a2b; padding: 10px; border-radius: 5px;');
 });
