@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rejoignez l'État Indépendant du Nord - Recrutements">
+    <title>État Indépendant du Nord - Recrutements</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="preload" href="assets/background.jpg" as="image">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Section Hero : image en fond + logo dessus -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-logo">
+            <img src="assets/logo.png" alt="État Indépendant du Nord">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Rejoignez Le Nord</h1>
+            <p class="hero-subtitle">Forgez votre destin dans les montagnes du Nord</p>
+            <a href="#entreprises" class="cta-button">
+                <span>Découvrir les opportunités</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Section Entreprises -->
+    <section id="entreprises" class="entreprises">
+        <div class="cards-container">
+            <!-- Card 1: Paleto Repair -->
+            <div class="card">
+                <div class="card-glow"></div>
+                <div class="card-icon garage">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <h3 class="card-title">Paleto Repair</h3>
+                <p class="card-subtitle">Garage Mécanique</p>
+                <p class="card-description">
+                    Le garage mécanique de référence du Nord. Nous recherchons des mécaniciens passionnés pour réparer et personnaliser les véhicules de notre communauté. Rejoignez une équipe professionnelle avec des équipements de pointe, une clientèle fidèle et de réelles possibilités d'évolution.
+                </p>
+                <button class="discord-btn" data-discord="paleto-repair-discord">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </button>
+            </div>
+
+            <!-- Card 2: Stags -->
+            <div class="card">
+                <div class="card-glow"></div>
+                <div class="card-icon restaurant">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3 class="card-title">Stags</h3>
+                <p class="card-subtitle">Restaurant</p>
+                <p class="card-description">
+                    Le restaurant emblématique du Nord. Nous recherchons des serveurs et cuisiniers motivés pour offrir une expérience culinaire exceptionnelle. Ambiance conviviale, horaires flexibles, formation complète et pourboires généreux vous attendent.
+                </p>
+                <button class="discord-btn" data-discord="stags-discord">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </button>
+            </div>
+
+            <!-- Card 3: LTD Paleto -->
+            <div class="card">
+                <div class="card-glow"></div>
+                <div class="card-icon magasin">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h3 class="card-title">LTD Paleto</h3>
+                <p class="card-subtitle">Magasin de Proximité</p>
+                <p class="card-description">
+                    Le magasin incontournable du Nord. Nous cherchons des vendeurs motivés et souriants pour servir notre communauté avec professionnalisme. Poste stable, ambiance familiale, formation assurée et gestion autonome des stocks.
+                </p>
+                <button class="discord-btn" data-discord="ltd-paleto-discord">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="assets/logo.png" alt="Logo">
+        <p>État Indépendant du Nord</p>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span>Lien Discord copié !</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
